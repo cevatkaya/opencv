@@ -30,4 +30,3 @@ void main() {
 	imshow("Image Erode", imgErode); 
 	waitKey(0);
 }
-
