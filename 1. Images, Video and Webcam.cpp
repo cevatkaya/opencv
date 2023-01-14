@@ -6,7 +6,7 @@
 using namespace cv;
 using namespace std;
 
-//Images
+// Images
 
 /*
 void main() {
@@ -18,7 +18,7 @@ void main() {
 }
 */
 
-//Video
+// Video
 
 /*
 void main() {
@@ -35,7 +35,7 @@ void main() {
 }
 */
 
-//Webcam
+// Webcam
 
 void main() {
 
