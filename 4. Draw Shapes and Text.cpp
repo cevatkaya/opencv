@@ -6,7 +6,7 @@
 using namespace cv;
 using namespace std;
 
-//Draw Shapes and Text
+// Draw Shapes and Text
 
 void main() {
 	
@@ -22,7 +22,5 @@ void main() {
 	putText(img, "Opencv Works", Point(140, 270), FONT_HERSHEY_DUPLEX, 1, Scalar(0,0,0),2); //text in image
 
 	imshow("Image", img);
-
 	waitKey(0);
 }
-
