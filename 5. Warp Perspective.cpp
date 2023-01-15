@@ -6,7 +6,7 @@
 using namespace cv;
 using namespace std;
 
-//Warp Images
+// Warp Images
 
 float w = 250, h = 300;
 Mat matrix, imgWarp;
