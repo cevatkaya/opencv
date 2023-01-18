@@ -6,7 +6,9 @@
 using namespace cv;
 using namespace std;
 
-// Resize and Crop
+/*
+	Resize and Crop
+*/
 
 void main()  {
 
