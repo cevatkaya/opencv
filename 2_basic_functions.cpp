@@ -6,7 +6,9 @@
 using namespace cv;
 using namespace std;
 
-// Basic Functions
+/*
+	Basic Functions
+*/
 
 void main() {
 
