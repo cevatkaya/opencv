@@ -14,13 +14,13 @@ Mat img;
 vector<vector<int>> newPoints;
 
 // Color Value
-							// hmin,smin,vmin,hmax,smax,vmax
+			    // hmin,smin,vmin,hmax,smax,vmax
 vector<vector<int>> myColors{ {112,84,6,136,255,122},    // Purple
-								{32,87,0,154,255,255} }; //Green
+				{32,87,0,154,255,255} }; //Green
 								
 
 vector<Scalar> myColorValues{ {255,0,255},	 //Purple
-								{0,255,0} }; //Green
+				{0,255,0} }; //Green
 
 Point getContours(Mat imgDil) {
 
