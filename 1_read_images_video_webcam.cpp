@@ -6,7 +6,9 @@
 using namespace cv;
 using namespace std;
 
-// Images
+/* 
+	Images
+/*
 
 /*
 void main() {
@@ -38,11 +40,12 @@ void main() {
 // Webcam
 
 void main() {
-
+	
 	VideoCapture cap(0); //you have one cam select 0, if you have more cam select 1
 	Mat	img;
 
 	while (true) {
+		
 		cap.read(img);
 		imshow("Image", img);
 		waitKey(1);
