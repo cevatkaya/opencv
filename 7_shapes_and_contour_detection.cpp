@@ -6,7 +6,9 @@
 using namespace cv;
 using namespace std;
 
-// Shapes and Contour Detection
+/* 
+	Shapes and Contour Detection
+*/
 
 Mat imgGray, imgBlur, imgCanny, imgDil, imgErode;
 
@@ -16,7 +18,7 @@ void getContours(Mat imgDil, Mat img) {
 	vector<Vec4i> hierarchy;
 
 	findContours(imgDil, contours, hierarchy, RETR_EXTERNAL, CHAIN_APPROX_SIMPLE);
-	// drawContours(img, contours, -1, Scalar(255, 0, 255), 2); //draw around shapes
+	//drawContours(img, contours, -1, Scalar(255, 0, 255), 2); //draw around shapes
 
 	vector<vector<Point>> conPoly(contours.size());
 	vector<Rect> boundRect(contours.size());
@@ -46,7 +48,9 @@ void getContours(Mat imgDil, Mat img) {
 				else { objectType = "Rect"; }
 			}
 
-			else if (objCor >= 4) { objectType = "Circle"; }
+			else if (objCor >= 4) { 
+				objectType = "Circle"; 
+			}
 
 			drawContours(img, conPoly, i, Scalar(255, 0, 255), 2);
 			rectangle(img, boundRect[i].tl(), boundRect[i].br(), Scalar(0, 255, 0), 2);
