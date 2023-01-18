@@ -6,7 +6,9 @@
 using namespace cv;
 using namespace std;
 
-// Warp Images
+/*
+	Warp Images
+*/
 
 float w = 250, h = 300;
 Mat matrix, imgWarp;
@@ -25,7 +27,6 @@ void main() {
 	for (int i = 0;i < 4; i++) {
 
 		circle(img, src[i], 10, Scalar(0, 0, 0), FILLED); 
-
 	}
 
 	imshow("Image", img);
