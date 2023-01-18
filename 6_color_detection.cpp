@@ -6,7 +6,9 @@
 using namespace cv;
 using namespace std;
 
-//Color Detection
+/* 
+	Color Detection
+*/
 
 Mat imgHSV,mask;
 int hmin = 0, smin = 110, vmin = 153;
