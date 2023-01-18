@@ -15,8 +15,8 @@ vector<Point> initialPoints, docPoints;
 
 float w = 420, h = 596;
 
-Mat preProcessing(Mat img)
-{
+Mat preProcessing(Mat img) {
+	
 	cvtColor(img, imgGray, COLOR_BGR2GRAY);
 	GaussianBlur(imgGray, imgBlur, Size(3, 3), 3, 0);
 	Canny(imgBlur, imgCanny, 25, 75);
@@ -49,6 +49,7 @@ vector<Point> getContours(Mat image) {
 
 		// draw around shapes whose area is greater than 200
 		if (area > 200) {
+			
 			float peri = arcLength(contours[i], true);
 			approxPolyDP(contours[i], conPoly[i], 0.02 * peri, true);
 
@@ -57,9 +58,7 @@ vector<Point> getContours(Mat image) {
 				//drawContours(imgOriginal, conPoly, i, Scalar(255, 0, 255), 5);
 				biggest = { conPoly[i][0], conPoly[i][1], conPoly[i][2], conPoly[i][3] };
 				maxArea = area;
-
 			}
-
 			//drawContours(imgOriginal, conPoly, i, Scalar(255, 0, 255), 2);
 			//rectangle(imgOriginal, boundRect[i].tl(), boundRect[i].br(), Scalar(0, 255, 0), 2);
 		}
@@ -70,17 +69,19 @@ vector<Point> getContours(Mat image) {
 void drawPoints(vector<Point> points, Scalar color) {
 
 	for (int i = 0; i < points.size(); i++) {
+		
 		circle(imgOriginal, points[i], 10, color, FILLED);
 		putText(imgOriginal, to_string(i), points[i], FONT_HERSHEY_PLAIN, 4, color, 4);
 	}
 }
 
 vector<Point> reorder(vector<Point> points) {
+	
 	vector<Point> newPoints;
 	vector<int> sumPoints, subPoints;
 
-	
 	for (int i = 0; i < 4; i++) {
+		
 		sumPoints.push_back(points[i].x + points[i].y);
 		subPoints.push_back(points[i].x - points[i].y);
 	}
