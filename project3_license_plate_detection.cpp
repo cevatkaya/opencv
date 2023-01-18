@@ -19,17 +19,19 @@ void main() {
 	plateCascade.load("resources/haarcascade_russian_plate_number.xml");
 
 	if (plateCascade.empty()) {
+		
 		cout << "XML file not loaded" << endl;
 	}
 
 	vector<Rect> plates;
 
 	while (true) {
+		
 		cap.read(img);
 		plateCascade.detectMultiScale(img, plates, 1.1, 10);
 
-		for (int i = 0;i < plates.size();i++)
-		{
+		for (int i = 0;i < plates.size();i++) {
+			
 			Mat imgCrop = img(plates[i]);
 			//imshow(to_string(i), imgCrop);
 
