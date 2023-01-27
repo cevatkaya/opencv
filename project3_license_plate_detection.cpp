@@ -41,5 +41,6 @@ void main() {
 
 		imshow("Image", img);
 		waitKey(1);
+		
 	}
 }
